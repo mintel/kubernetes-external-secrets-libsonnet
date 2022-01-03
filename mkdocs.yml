@@ -12,10 +12,10 @@
       "separator": "[\\s\\-\\.]+"
   - "minify":
       "minify_html": true
-"repo_name": "jsonnet-libs/external-secrets-libsonnet"
-"repo_url": "https://github.com/jsonnet-libs/external-secrets-libsonnet"
-"site_name": "external-secrets jsonnet library"
-"site_url": "https://jsonnet-libs.github.io/external-secrets-libsonnet"
+"repo_name": "mintel/kubernetes-external-secrets-libsonnet"
+"repo_url": "https://github.com/mintels/kubernetes-external-secrets-libsonnet"
+"site_name": "kubernetes-external-secrets jsonnet library"
+"site_url": "https://mintel.github.io/kubernetes-external-secrets-libsonnet"
 "theme":
   "name": "material"
   "palette":

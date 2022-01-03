@@ -1,10 +1,10 @@
 ---
-permalink: /0.3/nogroup/v1alpha1/externalSecret/
+permalink: /8/nogroup/v1/externalSecret/
 ---
 
-# nogroup.v1alpha1.externalSecret
+# nogroup.v1.externalSecret
 
-"ExternalSecret is the Schema for the external-secrets API."
+
 
 ## Index
 
@@ -32,29 +32,24 @@ permalink: /0.3/nogroup/v1alpha1/externalSecret/
   * [`fn withSelfLink(selfLink)`](#fn-metadatawithselflink)
   * [`fn withUid(uid)`](#fn-metadatawithuid)
 * [`obj spec`](#obj-spec)
+  * [`fn withBackendType(backendType)`](#fn-specwithbackendtype)
+  * [`fn withControllerId(controllerId)`](#fn-specwithcontrollerid)
   * [`fn withData(data)`](#fn-specwithdata)
   * [`fn withDataFrom(dataFrom)`](#fn-specwithdatafrom)
   * [`fn withDataFromMixin(dataFrom)`](#fn-specwithdatafrommixin)
+  * [`fn withDataFromWithOptions(dataFromWithOptions)`](#fn-specwithdatafromwithoptions)
+  * [`fn withDataFromWithOptionsMixin(dataFromWithOptions)`](#fn-specwithdatafromwithoptionsmixin)
   * [`fn withDataMixin(data)`](#fn-specwithdatamixin)
-  * [`fn withRefreshInterval(refreshInterval)`](#fn-specwithrefreshinterval)
-  * [`obj spec.secretStoreRef`](#obj-specsecretstoreref)
-    * [`fn withKind(kind)`](#fn-specsecretstorerefwithkind)
-    * [`fn withName(name)`](#fn-specsecretstorerefwithname)
-  * [`obj spec.target`](#obj-spectarget)
-    * [`fn withCreationPolicy(creationPolicy)`](#fn-spectargetwithcreationpolicy)
-    * [`fn withImmutable(immutable)`](#fn-spectargetwithimmutable)
-    * [`fn withName(name)`](#fn-spectargetwithname)
-    * [`obj spec.target.template`](#obj-spectargettemplate)
-      * [`fn withData(data)`](#fn-spectargettemplatewithdata)
-      * [`fn withDataMixin(data)`](#fn-spectargettemplatewithdatamixin)
-      * [`fn withTemplateFrom(templateFrom)`](#fn-spectargettemplatewithtemplatefrom)
-      * [`fn withTemplateFromMixin(templateFrom)`](#fn-spectargettemplatewithtemplatefrommixin)
-      * [`fn withType(type)`](#fn-spectargettemplatewithtype)
-      * [`obj spec.target.template.metadata`](#obj-spectargettemplatemetadata)
-        * [`fn withAnnotations(annotations)`](#fn-spectargettemplatemetadatawithannotations)
-        * [`fn withAnnotationsMixin(annotations)`](#fn-spectargettemplatemetadatawithannotationsmixin)
-        * [`fn withLabels(labels)`](#fn-spectargettemplatemetadatawithlabels)
-        * [`fn withLabelsMixin(labels)`](#fn-spectargettemplatemetadatawithlabelsmixin)
+  * [`fn withKeyByName(keyByName)`](#fn-specwithkeybyname)
+  * [`fn withKeyVaultName(keyVaultName)`](#fn-specwithkeyvaultname)
+  * [`fn withKvVersion(kvVersion)`](#fn-specwithkvversion)
+  * [`fn withProjectId(projectId)`](#fn-specwithprojectid)
+  * [`fn withRegion(region)`](#fn-specwithregion)
+  * [`fn withRoleArn(roleArn)`](#fn-specwithrolearn)
+  * [`fn withTemplate(template)`](#fn-specwithtemplate)
+  * [`fn withType(type)`](#fn-specwithtype)
+  * [`fn withVaultMountPoint(vaultMountPoint)`](#fn-specwithvaultmountpoint)
+  * [`fn withVaultRole(vaultRole)`](#fn-specwithvaultrole)
 
 ## Fields
 
@@ -250,7 +245,23 @@ withUid(uid)
 
 ## obj spec
 
-"ExternalSecretSpec defines the desired state of ExternalSecret."
+
+
+### fn spec.withBackendType
+
+```ts
+withBackendType(backendType)
+```
+
+"Determines which backend to use for fetching secrets"
+
+### fn spec.withControllerId
+
+```ts
+withControllerId(controllerId)
+```
+
+"The ID of controller instance that manages this ExternalSecret. This is needed in case there is more than a KES controller instances within the cluster."
 
 ### fn spec.withData
 
@@ -258,7 +269,7 @@ withUid(uid)
 withData(data)
 ```
 
-"Data defines the connection between the Kubernetes Secret keys and the Provider data"
+
 
 ### fn spec.withDataFrom
 
@@ -266,7 +277,7 @@ withData(data)
 withDataFrom(dataFrom)
 ```
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+
 
 ### fn spec.withDataFromMixin
 
@@ -274,7 +285,25 @@ withDataFrom(dataFrom)
 withDataFromMixin(dataFrom)
 ```
 
-"DataFrom is used to fetch all properties from a specific Provider data If multiple entries are specified, the Secret keys are merged in the specified order"
+
+
+**Note:** This function appends passed data to existing values
+
+### fn spec.withDataFromWithOptions
+
+```ts
+withDataFromWithOptions(dataFromWithOptions)
+```
+
+
+
+### fn spec.withDataFromWithOptionsMixin
+
+```ts
+withDataFromWithOptionsMixin(dataFromWithOptions)
+```
+
+
 
 **Note:** This function appends passed data to existing values
 
@@ -284,150 +313,86 @@ withDataFromMixin(dataFrom)
 withDataMixin(data)
 ```
 
-"Data defines the connection between the Kubernetes Secret keys and the Provider data"
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.withRefreshInterval
-
-```ts
-withRefreshInterval(refreshInterval)
-```
-
-"RefreshInterval is the amount of time before the values are read again from the SecretStore provider Valid time units are \"ns\", \"us\" (or \"µs\"), \"ms\", \"s\", \"m\", \"h\" May be set to zero to fetch and create it once. Defaults to 1h."
-
-## obj spec.secretStoreRef
-
-"SecretStoreRef defines which SecretStore to fetch the ExternalSecret data."
-
-### fn spec.secretStoreRef.withKind
-
-```ts
-withKind(kind)
-```
-
-"Kind of the SecretStore resource (SecretStore or ClusterSecretStore) Defaults to `SecretStore`"
-
-### fn spec.secretStoreRef.withName
-
-```ts
-withName(name)
-```
-
-"Name of the SecretStore resource"
-
-## obj spec.target
-
-"ExternalSecretTarget defines the Kubernetes Secret to be created There can be only one target per ExternalSecret."
-
-### fn spec.target.withCreationPolicy
-
-```ts
-withCreationPolicy(creationPolicy)
-```
-
-"CreationPolicy defines rules on how to create the resulting Secret Defaults to 'Owner'"
-
-### fn spec.target.withImmutable
-
-```ts
-withImmutable(immutable)
-```
-
-"Immutable defines if the final secret will be immutable"
-
-### fn spec.target.withName
-
-```ts
-withName(name)
-```
-
-"Name defines the name of the Secret resource to be managed This field is immutable Defaults to the .metadata.name of the ExternalSecret resource"
-
-## obj spec.target.template
-
-"Template defines a blueprint for the created Secret resource."
-
-### fn spec.target.template.withData
-
-```ts
-withData(data)
-```
-
-
-
-### fn spec.target.template.withDataMixin
-
-```ts
-withDataMixin(data)
-```
-
 
 
 **Note:** This function appends passed data to existing values
 
-### fn spec.target.template.withTemplateFrom
+### fn spec.withKeyByName
 
 ```ts
-withTemplateFrom(templateFrom)
+withKeyByName(keyByName)
 ```
 
+"Whether to interpret the key as a secret name (if true) or ID (the default). Used by: ibmcloudSecretsManager"
 
-
-### fn spec.target.template.withTemplateFromMixin
+### fn spec.withKeyVaultName
 
 ```ts
-withTemplateFromMixin(templateFrom)
+withKeyVaultName(keyVaultName)
 ```
 
+"Used by: azureKeyVault"
 
+### fn spec.withKvVersion
 
-**Note:** This function appends passed data to existing values
+```ts
+withKvVersion(kvVersion)
+```
 
-### fn spec.target.template.withType
+"Vault K/V version either 1 or 2, default = 2"
+
+### fn spec.withProjectId
+
+```ts
+withProjectId(projectId)
+```
+
+"Used by: gcpSecretsManager"
+
+### fn spec.withRegion
+
+```ts
+withRegion(region)
+```
+
+"Used by: secretsManager, systemManager"
+
+### fn spec.withRoleArn
+
+```ts
+withRoleArn(roleArn)
+```
+
+"Used by: alicloudSecretsManager, secretsManager, systemManager"
+
+### fn spec.withTemplate
+
+```ts
+withTemplate(template)
+```
+
+"Template which will be deep merged without mutating any existing fields. into generated secret, can be used to set for example annotations or type on the generated secret"
+
+### fn spec.withType
 
 ```ts
 withType(type)
 ```
 
+"DEPRECATED: Use spec.template.type"
 
-
-## obj spec.target.template.metadata
-
-"ExternalSecretTemplateMetadata defines metadata fields for the Secret blueprint."
-
-### fn spec.target.template.metadata.withAnnotations
+### fn spec.withVaultMountPoint
 
 ```ts
-withAnnotations(annotations)
+withVaultMountPoint(vaultMountPoint)
 ```
 
+"Used by: vault"
 
-
-### fn spec.target.template.metadata.withAnnotationsMixin
+### fn spec.withVaultRole
 
 ```ts
-withAnnotationsMixin(annotations)
+withVaultRole(vaultRole)
 ```
 
-
-
-**Note:** This function appends passed data to existing values
-
-### fn spec.target.template.metadata.withLabels
-
-```ts
-withLabels(labels)
-```
-
-
-
-### fn spec.target.template.metadata.withLabelsMixin
-
-```ts
-withLabelsMixin(labels)
-```
-
-
-
-**Note:** This function appends passed data to existing values
+"Used by: vault"
