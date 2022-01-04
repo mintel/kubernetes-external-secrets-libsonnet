@@ -1,5 +1,5 @@
 ---
-permalink: /8/nogroup/
+permalink: /8.5/nogroup/
 ---
 
 # nogroup

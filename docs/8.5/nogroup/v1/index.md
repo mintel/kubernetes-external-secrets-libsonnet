@@ -1,5 +1,5 @@
 ---
-permalink: /8/nogroup/v1/
+permalink: /8.5/nogroup/v1/
 ---
 
 # nogroup.v1

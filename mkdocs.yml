@@ -13,7 +13,7 @@
   - "minify":
       "minify_html": true
 "repo_name": "mintel/kubernetes-external-secrets-libsonnet"
-"repo_url": "https://github.com/mintels/kubernetes-external-secrets-libsonnet"
+"repo_url": "https://github.com/mintel/kubernetes-external-secrets-libsonnet"
 "site_name": "kubernetes-external-secrets jsonnet library"
 "site_url": "https://mintel.github.io/kubernetes-external-secrets-libsonnet"
 "theme":

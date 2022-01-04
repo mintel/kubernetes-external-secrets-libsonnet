@@ -1,5 +1,5 @@
 ---
-permalink: /8/nogroup/v1/externalSecret/
+permalink: /8.5/nogroup/v1/externalSecret/
 ---
 
 # nogroup.v1.externalSecret
