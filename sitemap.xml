@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/</loc>
-         <lastmod>2022-01-03</lastmod>
+         <lastmod>2022-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/8/</loc>
-         <lastmod>2022-01-03</lastmod>
+         <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/8.5/</loc>
+         <lastmod>2022-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/8/nogroup/</loc>
-         <lastmod>2022-01-03</lastmod>
+         <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/8.5/nogroup/</loc>
+         <lastmod>2022-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/8/nogroup/v1/</loc>
-         <lastmod>2022-01-03</lastmod>
+         <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/8.5/nogroup/v1/</loc>
+         <lastmod>2022-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/8/nogroup/v1/externalSecret/</loc>
-         <lastmod>2022-01-03</lastmod>
+         <loc>https://mintel.github.io/kubernetes-external-secrets-libsonnet/8.5/nogroup/v1/externalSecret/</loc>
+         <lastmod>2022-01-04</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
